@@ -1,0 +1,110 @@
+/* animate.css */
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}
+
+.rotate-360 {
+  animation: rotate360 0.6s linear;
+}
+
+
+/* infinite mover */
+
+@keyframes infinite-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+@keyframes infinite-scrolltwo {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+
+.infinite-mover {
+  width: 400vw; /* Adjust based on the total width needed */
+  overflow: hidden; /* Hide any overflow for a seamless effect */
+  display: flex;
+  animation: infinite-scroll 12s linear infinite;
+  background-color: transparent;
+}
+
+.infinite-movertwo {
+  width: 400vw; /* Adjust based on the total width needed */
+  overflow: hidden; /* Hide any overflow for a seamless effect */
+  display: flex;
+  animation: infinite-scrolltwo 12s linear infinite;
+  background-color: transparent;
+  
+}
+/* reactor */
+.scale-up {
+  transition: transform 0.3s ease-in-out;
+}
+
+.scale-up.scrolled {
+  transform: scale(1.1); /* Adjust the scale value as needed */
+}
+
+
+/* background */
+.gradient-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(130deg, #68219b,#cd5229,#074B94, #7B503F);
+  background-size: 6000px 100%;
+  animation:   gradientAnimation ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 25%; }
+  50% { background-position: 25% 50%; }
+  75% { background-position: 50% 75%; }
+  100% { background-position: 75% 100%; }
+}
+
+.content {
+  text-align: center;
+  color: white;
+}
+
+
+/* new bg grade */
+
+
+/* Base container styles */
+.gradient-bgg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(130deg, #68219b, #074B94, #cd5229, #7B503F); /* Default gradient */
+  background-size: 7200px 100%;
+}
+
+/* toggle */
+
+.translate-y-full {
+  transform: translateY(100%);
+}
+
+.translate-y-0 {
+  transform: translateY(0);
+}
+
+.transition-transform {
+  transition: transform 0.5s ease-in-out;
+}
