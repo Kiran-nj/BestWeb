@@ -20,7 +20,7 @@ const Header = () => {
         <div className='mx-10 my-5 fixed top-14 left-0 right-0 z-10'>
             <div className='flex justify-between items-center'>
                 {/* icon */}
-                <h1 className='text-8xl z-40'><GiReactor /></h1>
+                <h1 className='text-7xl text-[#3B0017] z-40'><GiReactor /></h1>
                 <div className='flex gap-4 items-center'>
                     <h1 className='text-5xl z-40'><HiOutlineShoppingBag /></h1>
                     {/* toggle button */}
