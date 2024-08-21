@@ -12,6 +12,7 @@ const Navbar = () => {
         <div className='hidden lg:flex font-poppins'>PLANT BASED PROTEIN</div>
         <GiNinjaStar className='text-3xl hidden lg:flex' />
         <div className='hidden lg:flex font-poppins'>PLANT BASED PROTEIN</div>
+        {/* comments */}
       </div>
     </nav>
   );
