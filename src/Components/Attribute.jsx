@@ -1,78 +1,36 @@
-import React, { useEffect, useRef } from 'react';
-import { GiAfrica } from "react-icons/gi";
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React from 'react';
+import { FaReact, FaNodeJs, FaCss3Alt } from "react-icons/fa";
+import { pattern3 } from './Constants';
 
-gsap.registerPlugin(ScrollTrigger);
 
-const Attribute = () => {
-  const leftIconsRef = useRef(null);
-  const rightIconsRef = useRef(null);
-  const textRef = useRef(null);
-
-  useEffect(() => {
-    const leftIcons = leftIconsRef.current.children;
-    const rightIcons = rightIconsRef.current.children;
-    const textLines = textRef.current.children;
-
-    gsap.from(leftIcons, {
-      scrollTrigger: {
-        trigger: leftIconsRef.current,
-        start: "top 90%", // Adjusted to start earlier
-        end: "bottom 10%", // Adjusted to end earlier
-        scrub: 1,
-      },
-      opacity: 0,
-      x: 300,
-      y: 200,
-      stagger: 0.1,
-      duration: .5,
-    });
-
-    gsap.from(rightIcons, {
-      scrollTrigger: {
-        trigger: rightIconsRef.current,
-        start: "top 90%", // Adjusted to start earlier
-        end: "bottom 10%", // Adjusted to end earlier
-        scrub: 1,
-      },
-      opacity: 0,
-      x: -300,
-      y: 200,
-      stagger: 0.1,
-      duration: .5,
-    });
-
-    gsap.from(textLines, {
-      scrollTrigger: {
-        trigger: textRef.current,
-        start: "top 90%", // Adjusted to start earlier
-        end: "bottom 10%", // Adjusted to end earlier
-        scrub: 1,
-      },
-      opacity: 0,
-      y: 50,
-      stagger: 0.1,
-      duration: .5,
-    });
-  }, []);
-
+const TechShowcase = () => {
   return (
-    <div className='flex justify-center items-center bg-[#3B0017] p-10 pb-20'>
-      <div className='flex flex-col gap-10' ref={leftIconsRef}>
-        <h1 className='text-[180px] text-yellow-400'><GiAfrica /></h1>
-        <h1 className='text-[180px] text-green-400'><GiAfrica /></h1>
+    <div className='relative'> 
+    <div className="flex w-full flex-col items-center bg-gray-800 pb-20 pt-14 md:mb-20  ">
+      <div className=" animate-fadeIn">
+        <h1 className="text-2xl md:text-5xl p-10 font-bold text-slate-300">Technology Stack</h1>
       </div>
-      <div className='mx-10 my-auto' ref={textRef}>
-        <h1 className='text-9xl h-24 text-[#b26de1] font-poppins font-semibold'>GOOD</h1>
-        <h1 className='text-9xl text-[#b26de1] font-poppins font-semibold'>REACT</h1>
+      <div className="flex gap-16">
+        <div className="text-blue-500  text-5xl md:text-9xl hover:rotate-180 transition-all duration-700 ">
+          <FaReact />
+        </div>
+        <div className="text-green-500 text-5xl md:text-9xl hover:animate-pulse hover:scale-110 transition-all duration-200 ">
+          <FaNodeJs />
+        </div>
+        <div className="text-blue-300 text-5xl md:text-9xl hover:text-orange-400 transition-all duration-300">
+          <FaCss3Alt />
+        </div>
       </div>
-      <div className='flex flex-col gap-10' ref={rightIconsRef}>
-        <h1 className='text-[180px] text-cyan-500'><GiAfrica /></h1>
-        <h1 className='text-[180px] text-orange-400'><GiAfrica /></h1>
-      </div>
+
+    </div>
+          <div className="bg-transparent  infinite-mover mt-[-152px] mb-[-10px]
+    md:flex hidden md:w-[200vw] z-20 ">
+              <img class="w-1/2" src={pattern3} alt=""/>
+              <img class="w-1/2" src={pattern3} alt=""/>
+
+    </div>
     </div>
   );
-}
+};
 
-export default Attribute;
+export default TechShowcase;

@@ -3,7 +3,7 @@ import { GiNinjaStar } from "react-icons/gi";
 
 const Navbar = () => {
   return (
-    <nav className="bg-[#FFDE17] text-center py-3 ">
+    <nav className="bg-[#FFDE17] text-center py-3 hidden md:block ">
       <div className="flex justify-between items-center text-xl text-red-500 mx-14">
         {/* commitss */}
         <div className='hidden md:flex font-poppins' >PLANT BASED PROTEIN</div>

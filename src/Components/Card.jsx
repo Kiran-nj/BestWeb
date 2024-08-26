@@ -21,7 +21,7 @@ const CardContainer = () => {
   ];
 
   return (
-    <div className="card-container">
+    <div className="card-container overflow-hidden">
       {cards.map((card, index) => (
         <Card key={index} dataText={card.dataText} svgPath={card.svgPath} rotation={card.rotation} />
       ))}

@@ -89,7 +89,7 @@ const HorizontalScrollProductShowcase = () => {
   const x = useTransform(scrollYProgress, [0, 1], [0, -width * (products.length - 1)]);
 
   return (
-    <section ref={targetRef} className="h-[300vh] mt-[-280px]">
+    <section ref={targetRef} className="h-[300vh] mt-[-280px] md:mt-[-280px]">
       <div ref={containerMeasureRef} className="sticky top-0 h-[100vh] overflow-hidden">
         <motion.div
           style={{ x }}

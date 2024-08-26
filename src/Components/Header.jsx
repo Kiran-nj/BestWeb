@@ -17,7 +17,7 @@ const Header = () => {
     };
 
     return (
-        <div className='mx-10 my-5 fixed top-14 left-0 right-0 z-10'>
+        <div className='mx-10 my-1 md:my-5 fixed top-1 md:top-14 left-0 right-0 z-10'>
             <div className='flex justify-between items-center'>
                 {/* icon */}
                 <h1 className='text-7xl text-[#3B0017] z-40'><GiReactor /></h1>

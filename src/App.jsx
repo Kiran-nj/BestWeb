@@ -18,14 +18,14 @@ function App() {
   return (
     <div className="">
       <Navbar />
-      <div className="relative">
-      <Header className="" /> {/* Fixed at the top */}
-      <Banner className="" /> {/* Adjust mt and translate-y values as needed */}
-      <HorizontalScroll/>
-      <Attribute />
-      <Lavender />
-      <Available />
-    </div>
+       <div className="relative">
+      <Header className="" />
+       <Banner className="" /> 
+    <HorizontalScroll/>
+     <Attribute />
+   <Lavender />
+          <Available />
+    </div> 
 
     </div>
   );
