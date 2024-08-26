@@ -15,7 +15,7 @@ const Lavender = () => {
     md:flex hidden md:w-[200vw] z-20 overflow-hidden">
               <img class="w-1/2" src={pattern3} alt=""/>
               <img class="w-1/2" src={pattern3} alt=""/>
-              /* commit */
+              /* commit 
     </div> */}
     <h1 className=' text-6xl md:text-[150px] text-center font-semibold  text-[#461A63] font-poppins
      md:py-auto md:mt-[10px] '>CARNIVORE</h1>
