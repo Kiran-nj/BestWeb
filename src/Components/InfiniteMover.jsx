@@ -51,7 +51,7 @@ boxes.forEach((box) => {
 
     {/* second div with infinite mover   */}
     <div className='hidden md:block  w-[100vw] md:w-[1000px] overflow-hidden'>
-    <div className="bg-transparent  infinite-mover absolute top-[720px] left-0 
+    <div className="bg-transparent  infinite-mover absolute top-[740px] left-0 
     flex w-[100vw] md:w-[200vw] z-10 ">
               <img class="w-1/2" src={pattern2} alt=""/>
               <img class="w-1/2" src={pattern2} alt=""/>
