@@ -46,13 +46,13 @@ const Header = () => {
         <div className='mx-10 my-1 md:my-5 fixed top-1 md:top-14 left-0 right-0 z-30'>
             <div className='flex justify-between items-center'>
                 {/* icon */}
-                <h1 className='text-7xl' style={{ color: iconColor }}><GiReactor /></h1>
+                <h1 className='text-7xl transition-colors duration-500 ease-in-out ' style={{ color: iconColor }}><GiReactor /></h1>
                 <div className='flex gap-4 items-center'>
-                    <h1 className='text-5xl z-40' style={{ color: iconColor }}><HiOutlineShoppingBag /></h1>
+                    <h1 className='text-5xl z-40 transition-colors duration-500 ease-in-out' style={{ color: iconColor }}><HiOutlineShoppingBag /></h1>
                     {/* toggle button */}
                     <div className="relative group flex">
                         {/* Apply animation to TiStarburst when hovering over the parent div */}
-                        <TiStarburst className={`text-8xl transition-transform duration-100 ${rotate ? 'rotate-360' : ''}`} style={{ color: iconColor }} />
+                        <TiStarburst className={`text-8xl transition-transform duration-100 ${rotate ? 'rotate-360' : ''} transition-colors duration-500 ease-in-out`} style={{ color: iconColor }} />
                         <span className='absolute top-[33px] right-[34px] z-40'>
                             <ToggleButton onClick={handleToggleClick} className="text-2xl z-50" />
                         </span>
