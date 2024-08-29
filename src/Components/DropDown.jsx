@@ -1,11 +1,12 @@
 import React from 'react';
 import { GiNinjaStar, GiReactor } from "react-icons/gi";
+import { pattern2 } from './Constants';
 
 const DropDown = () => {
   return (
-    <div className='bg-[#3B0017] text-center py-5 z-30 hidden'>
+    <div className='bg-[#3B0017] text-center py-5 w-full hidden'>
       <nav>
-        <div className="flex justify-between items-center text-xl text-yellow-500 mx-14">
+        <div className="flex justify-between items-center text-xl text-yellow-500 mx-8">
           <div className='hidden md:flex font-poppins'>PLANT BASED PROTEIN</div>
           <GiNinjaStar className='text-3xl' />
           <div className='hidden md:flex font-poppins'>PLANT BASED PROTEIN</div>
@@ -16,27 +17,25 @@ const DropDown = () => {
         </div>
       </nav>
       <div className='bg-yellow-400 flex mt-3 pb-16'>
-            <div className='w-[40%] my-20 mx-24'>
-              <h1><GiReactor className='text-[400px]'/></h1>
-            </div>
-            <div className='w-1/2 text-left mt-5 mb-20'>
-              <h1 className='text-8xl font-poppins font-semibold'>Product</h1>
-              <h1 className='text-8xl font-poppins  font-semibold'>Recipes</h1>
-              <h1 className='text-8xl font-poppins  font-semibold'>About us</h1>
-              <h1 className='text-8xl font-poppins  font-semibold'>Blog</h1>
-
-            </div>
+        <div className='w-1/2 my-16 mx-16'>
+          <h1><GiReactor className='text-[200px] md:text-[300px] lg:text-[400px]' /></h1>
+        </div>
+        <div className='w-1/2 text-left mt-5 mb-20'>
+          <h1 className='text-5xl md:text-6xl lg:text-8xl font-poppins font-semibold'>Product</h1>
+          <h1 className='text-5xl md:text-6xl lg:text-8xl font-poppins font-semibold'>Recipes</h1>
+          <h1 className='text-5xl md:text-6xl lg:text-8xl font-poppins font-semibold'>About us</h1>
+          <h1 className='text-5xl md:text-6xl lg:text-8xl font-poppins font-semibold'>Blog</h1>
+        </div>
       </div>
-      <div className="bg-transparent h-[1px]  infinite-mover relative 
-    flex w-[400vw] sm:w-[200vw] z-20 overflow-hidden">
-              <img class="w-1/2" src="data:image/svg+xml,%3csvg%20width='2096'%20height='268'%20viewBox='0%200%202096%20268'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M261.985%20129C260.916%2057.5729%20202.681%200%20131%200C59.3185%200%201.08396%2057.5729%200.0149573%20129H0V131V268H2096V131V129H2095.99C2094.92%2057.5729%202036.68%200%201965%200C1893.32%200%201835.08%2057.5729%201834.02%20129H1833.98C1832.92%2057.5729%201774.68%200%201703%200C1631.32%200%201573.08%2057.5729%201572.02%20129H1571.98C1570.92%2057.5729%201512.68%200%201441%200C1369.32%200%201311.08%2057.5729%201310.02%20129H1309.98C1308.92%2057.5729%201250.68%200%201179%200C1107.32%200%201049.08%2057.5729%201048.02%20129H1047.98C1046.92%2057.5729%20988.681%200%20917%200C845.319%200%20787.084%2057.5729%20786.015%20129H785.985C784.916%2057.5729%20726.681%200%20655%200C583.319%200%20525.084%2057.5729%20524.015%20129H523.985C522.916%2057.5729%20464.681%200%20393%200C321.319%200%20263.084%2057.5729%20262.015%20129H261.985Z'%20fill='%233B0017'/%3e%3c/svg%3e" alt=""/>
-              <img class="w-1/2" src="data:image/svg+xml,%3csvg%20width='2096'%20height='268'%20viewBox='0%200%202096%20268'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M261.985%20129C260.916%2057.5729%20202.681%200%20131%200C59.3185%200%201.08396%2057.5729%200.0149573%20129H0V131V268H2096V131V129H2095.99C2094.92%2057.5729%202036.68%200%201965%200C1893.32%200%201835.08%2057.5729%201834.02%20129H1833.98C1832.92%2057.5729%201774.68%200%201703%200C1631.32%200%201573.08%2057.5729%201572.02%20129H1571.98C1570.92%2057.5729%201512.68%200%201441%200C1369.32%200%201311.08%2057.5729%201310.02%20129H1309.98C1308.92%2057.5729%201250.68%200%201179%200C1107.32%200%201049.08%2057.5729%201048.02%20129H1047.98C1046.92%2057.5729%20988.681%200%20917%200C845.319%200%20787.084%2057.5729%20786.015%20129H785.985C784.916%2057.5729%20726.681%200%20655%200C583.319%200%20525.084%2057.5729%20524.015%20129H523.985C522.916%2057.5729%20464.681%200%20393%200C321.319%200%20263.084%2057.5729%20262.015%20129H261.985Z'%20fill='%233B0017'/%3e%3c/svg%3e" alt=""/>
-    </div>
-      <div className="bg-transparent h-[200px]  infinite-mover absolute top-[500px]
-    flex w-[400vw] sm:w-[200vw] z-20 overflow-hidden">
-              <img class="w-1/2" src="data:image/svg+xml,%3csvg%20width='2096'%20height='268'%20viewBox='0%200%202096%20268'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M261.985%20129C260.916%2057.5729%20202.681%200%20131%200C59.3185%200%201.08396%2057.5729%200.0149573%20129H0V131V268H2096V131V129H2095.99C2094.92%2057.5729%202036.68%200%201965%200C1893.32%200%201835.08%2057.5729%201834.02%20129H1833.98C1832.92%2057.5729%201774.68%200%201703%200C1631.32%200%201573.08%2057.5729%201572.02%20129H1571.98C1570.92%2057.5729%201512.68%200%201441%200C1369.32%200%201311.08%2057.5729%201310.02%20129H1309.98C1308.92%2057.5729%201250.68%200%201179%200C1107.32%200%201049.08%2057.5729%201048.02%20129H1047.98C1046.92%2057.5729%20988.681%200%20917%200C845.319%200%20787.084%2057.5729%20786.015%20129H785.985C784.916%2057.5729%20726.681%200%20655%200C583.319%200%20525.084%2057.5729%20524.015%20129H523.985C522.916%2057.5729%20464.681%200%20393%200C321.319%200%20263.084%2057.5729%20262.015%20129H261.985Z'%20fill='%233B0017'/%3e%3c/svg%3e" alt=""/>
-              <img class="w-1/2" src="data:image/svg+xml,%3csvg%20width='2096'%20height='268'%20viewBox='0%200%202096%20268'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M261.985%20129C260.916%2057.5729%20202.681%200%20131%200C59.3185%200%201.08396%2057.5729%200.0149573%20129H0V131V268H2096V131V129H2095.99C2094.92%2057.5729%202036.68%200%201965%200C1893.32%200%201835.08%2057.5729%201834.02%20129H1833.98C1832.92%2057.5729%201774.68%200%201703%200C1631.32%200%201573.08%2057.5729%201572.02%20129H1571.98C1570.92%2057.5729%201512.68%200%201441%200C1369.32%200%201311.08%2057.5729%201310.02%20129H1309.98C1308.92%2057.5729%201250.68%200%201179%200C1107.32%200%201049.08%2057.5729%201048.02%20129H1047.98C1046.92%2057.5729%20988.681%200%20917%200C845.319%200%20787.084%2057.5729%20786.015%20129H785.985C784.916%2057.5729%20726.681%200%20655%200C583.319%200%20525.084%2057.5729%20524.015%20129H523.985C522.916%2057.5729%20464.681%200%20393%200C321.319%200%20263.084%2057.5729%20262.015%20129H261.985Z'%20fill='%233B0017'/%3e%3c/svg%3e" alt=""/>
-    </div>
+      {/* Infinite mover section */}
+      <div className="bg-transparent h-[1px] infinite-mover relative flex w-[200vw] sm:w-[200vw] z-20 overflow-hidden">
+        <img className="w-1/2" src={pattern2} alt="pattern" />
+        <img className="w-1/2" src={pattern2} alt="pattern" />
+      </div>
+      <div className="bg-transparent h-[200px] infinite-mover absolute top-[500px] flex w-[200vw] sm:w-[200vw] z-20 overflow-hidden">
+        <img className="w-1/2" src={pattern2} alt="pattern" />
+        <img className="w-1/2" src={pattern2} alt="pattern" />
+      </div>
     </div>
   );
 }

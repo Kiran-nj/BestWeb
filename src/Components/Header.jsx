@@ -12,6 +12,7 @@ const Header = () => {
     const [iconColor, setIconColor] = useState('#3B0017'); // Default color
 
     const handleToggleClick = () => {
+        console.log('Toggle clicked'); // Debugging
         setRotate(true);
         setShowDropdown(!showDropdown);
         setTimeout(() => setRotate(false), 600);
@@ -43,7 +44,7 @@ const Header = () => {
     }, []);
 
     return (
-        <div className='mx-10 my-1 md:my-5 fixed top-1 md:top-14 left-0 right-0 z-30'>
+        <div className='mx-10 my-1 md:my-5 fixed top-1 md:top-14 left-0 right-0 z-50'>
             <div className='flex justify-between items-center'>
                 {/* icon */}
                 <h1 className='text-7xl transition-colors duration-500 ease-in-out ' style={{ color: iconColor }}><GiReactor /></h1>
@@ -52,16 +53,19 @@ const Header = () => {
                     {/* toggle button */}
                     <div className="relative group flex">
                         {/* Apply animation to TiStarburst when hovering over the parent div */}
-                        <TiStarburst className={`text-8xl transition-transform duration-100 ${rotate ? 'rotate-360' : ''} transition-colors duration-500 ease-in-out`} style={{ color: iconColor }} />
+                        <TiStarburst className={`text-8xl transition-colors duration-100 ${rotate ? 'rotate-360' : ''}  duration-500 ease-in-out`} style={{ color: iconColor }} />
                         <span className='absolute top-[33px] right-[34px] z-40'>
                             <ToggleButton onClick={handleToggleClick} className="text-2xl z-50" />
                         </span>
                     </div>
                 </div>
             </div>
-            <div className={`transition-transform duration-500 ease-in-out ${showDropdown ? 'top-0 ' : 'bottom-0 '} fixed left-0 right-0 z-40`}>
-                <DropDown />
-            </div>
+            {console.log(showDropdown)}
+            {showDropdown && (
+                <div className={`fixed top-0 left-0 right-0 z-40`}> {/* Increased z-index */}
+                    <DropDown />
+                </div>
+            )}
         </div>
     );
 }
